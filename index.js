@@ -88,7 +88,7 @@ app.get('/allProducts', async (req, res) => {
     // get all api 
     app.get('/allProduct/available',async(req,res)=>{
       const query= {
-         minQty : { $gt : 100}
+         minQty : { $gt : 50}
       }
       const result= await reSellersCollection.find(query).toArray()
       res.send(result)
